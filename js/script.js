@@ -7,6 +7,8 @@ const arrayOfText = [];
 
 const space = `${' '}`;
 const comma = `${','}`;
+let count = 0;
+let count2 = 0;
 
 const textArray = (peep) => {
     const text = textInputField.value;
@@ -20,11 +22,17 @@ const textArray = (peep) => {
 const addItem = (peep) => {
     textArray(peep);
     console.log("mak", arrayOfText);
+    if(textInputField.value === ''){
+        alert('Plese Add Some Text In to Input Field')
+        return;
+    }
     for (item of arrayOfText) {
         const list = document.createElement('li');
-        list.innerText = item;
+        count = count+1;
+        list.innerHTML = `<li class = "py-2 px-3 border-t-2 border-dashed border-gray-200">${count}. ${item}</li>`
         display.appendChild(list)
         textInputField.value = '';
+        document.getElementById('input-container').classList.add('hidden');
     }
 }
 
@@ -38,8 +46,10 @@ winnerButton.addEventListener('click', () => {
     const randomNumber = Math.random() * ArrayLength;
     const randomNumberRound = Math.floor(randomNumber);
     
+    count2 = count2+1;
     const winnerList = document.createElement('li');
-    winnerList.innerText = arrayOfText[randomNumberRound];
+
+    winnerList.innerHTML = `<li class = "py-2 px-3 border-t-2 border-dashed border-gray-200">${count2}. ${arrayOfText[randomNumberRound]}</li>`
 
     const randomRotation = Math.random()*360;
     const randomDegree = Math.floor(randomRotation);

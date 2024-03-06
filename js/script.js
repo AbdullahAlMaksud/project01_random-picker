@@ -65,9 +65,4 @@ winnerButton.addEventListener('click', () => {
     5000)
 
     console.log(randomDegree);
-    // textInputField.value = ''
 });
-
-// function winnerSelector() {
-
-// }

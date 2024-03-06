@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinner</title>
 
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,7 +36,7 @@
 <body class="mt-20">
     <main class="container w-11/12 mx-auto">
         
-        <div class="flex flex-wrap justify-center gap-[2px]">
+        <div class="flex flex-col-reverse  lg:flex-row justify-center items-center gap-2 lg:gap-[2px]">
             <div class=" bg-slate-300 p-10 rounded-lg lg:rounded-none lg:rounded-l-lg">
                 <div class="flex flex-col gap-2 min-w-64">
                     <textarea id="text-area" class="textarea textarea-secondary"
@@ -61,7 +62,8 @@
                         class="material-symbols-rounded absolute z-10 text-5xl text-red-500 hover:cursor-pointer border-2 border-gray-200 rounded-full bg-white drop-shadow-lg">
                         play_arrow
                     </span>
-                    <img class="absolute -inset-y-0 -inset-x-0 z-10" src="./assets/spike.svg" alt="">
+                    <!-- <img class="absolute -inset-y-0 -inset-x-0 z-10" src="./assets/spike.svg" alt=""> -->
+                    <img class="absolute w-12 rotate-45 inset-y-10 inset-x-52 z-10" src="./assets/placeholder.png" alt="">
 <!-- 
                     <span class="material-symbols-rounded absolute inset-y-10 inset-x-48 z-10 text-6xl ">
                         transit_enterexit
@@ -71,13 +73,15 @@
 
                     </span>
 
-                    <div id="circle"
+                    <div
                         class="bg-orange-400 rounded-full w-60 h-60 flex justify-center items-center border-gray-200 border-[15px] relative">
-                        <div class="h-[2px] bg-gray-200 w-full absolute"></div>
-                        <div class="h-[2px] rotate-90 bg-gray-200 w-full absolute"></div>
-                        <div class="h-[1px] rotate-45 bg-gray-200 w-full absolute"></div>
-                        <div class="h-[1px] -rotate-45 bg-gray-200 w-full absolute"></div>
-                        <div class="h-[1px] bg-gray-200 w-full absolute"></div>
+                        <div  id="circle" class="absolute w-full">
+                            <div class="h-[2px] bg-gray-200"></div>
+                            <div class="h-[2px] rotate-90 bg-gray-200 w-full"></div>
+                            <div class="h-[1px] rotate-45 bg-gray-200 w-full"></div>
+                            <div class="h-[1px] -rotate-45 bg-gray-200 w-full"></div>
+                            <!-- <div class="h-[1px] bg-gray-200 w-full"></div> -->
+                        </div>
                         <!-- <div class="h-3 rotate-90 bg-gray-200 w-full "></div>
     <div class="h-3 rotate-45 bg-gray-200 w-full "></div>
     <div class="h-3 bg-gray-200 w-full "></div> -->

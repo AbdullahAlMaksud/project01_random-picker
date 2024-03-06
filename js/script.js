@@ -31,19 +31,29 @@ const addItem = (peep) => {
 winnerButton.addEventListener('click', () => {
     console.log("mak", arrayOfText);
     let ArrayLength = arrayOfText.length;
+    if(ArrayLength === 0){
+        alert('Please Input Some Text First!')
+        return;
+    }
     const randomNumber = Math.random() * ArrayLength;
     const randomNumberRound = Math.floor(randomNumber);
     
     const winnerList = document.createElement('li');
     winnerList.innerText = arrayOfText[randomNumberRound];
+
+    const randomRotation = Math.random()*360;
+    const randomDegree = Math.floor(randomRotation);
     
     const Circle = document.getElementById('circle');
-    Circle.classList.add('spinneranimation');
+    Circle.classList.add('spinneranimation'); 
+    Circle.classList.add(`rotate-[${randomDegree}deg]`); 
     setTimeout(()=>{
         Circle.classList.remove('spinneranimation');
         winnerDisplay.appendChild(winnerList);
     },
     5000)
+
+    console.log(randomDegree);
     // textInputField.value = ''
 });
 

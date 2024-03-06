@@ -37,12 +37,13 @@ const addItem = (peep) => {
 }
 
 winnerButton.addEventListener('click', () => {
-    console.log("mak", arrayOfText);
     let ArrayLength = arrayOfText.length;
     if(ArrayLength === 0){
         alert('Please Input Some Text First!')
         return;
     }
+
+    console.log("mak", arrayOfText);
     const randomNumber = Math.random() * ArrayLength;
     const randomNumberRound = Math.floor(randomNumber);
     

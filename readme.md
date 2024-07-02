@@ -45,11 +45,6 @@ Check out the live demo of the Random Picker at https://abdullahalmaksud.github.
 ## Contribution
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue to discuss any changes.
 
-## License
-- This project is licensed under the MIT License. See the LICENSE file for more details.
-- Feel free to customize the repository URL in the cloning instructions and any other details as needed.
-
-
 ### Developed by Abdullah Al Maksud
 - Portfolio: https://portfolio-abdullahalmaksud.web.app
 - Email: maksud.workspace@gmail.com
